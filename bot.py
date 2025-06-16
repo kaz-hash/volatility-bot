@@ -32,10 +32,8 @@ for ticker in tickers:
         messages.append(f"📉 {ticker}: RSI {last_rsi:.2f}, ATR {last_atr:.2f} — ВОЗМОЖНА ПРОДАЖА по ${price:.2f}")
 
 if not messages:
-    messages.append("🤖 Сегодня нет сильных торговых сигналов. Ждём подходящего момента.")
+    messages.append("🤖 Сегодня нет сильных торговых сигналов. 
 
-final_message = "🕒 Сигналы на сегодня:\n"
-
-" + "\n".join(messages)
+final_message = "🕒 Сигналы на сегодня:"
 
 bot.send_message(chat_id=chat_id, text=final_message)
